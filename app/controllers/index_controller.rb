@@ -5,9 +5,12 @@ end
 
 
 post '/save_new_user' do
-  @user = params[:user]
+  puts params[:name]
+  @name = params[:name]
+  User.new(name: name)
 
-  puts params
+  # @user.save!
+  # redirect '/'
 
 
 end
