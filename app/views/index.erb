@@ -11,3 +11,9 @@
 <% @user.each do |user| %>
 <li><%= user.id %> <%= user.name %></li>
 <% end %>
+
+<% if @user %>
+There is users
+<% else %>
+There is no users
+<% end %>
