@@ -12,8 +12,12 @@
 <li><%= user.id %> <%= user.name %></li>
 <% end %>
 
-<% if @user %>
-There is users
+
+
+<% if @user.last.id == 1 %>
+  There is only one user
+  <h1>Users cont: <%= @user.last.id %> user</h1>
 <% else %>
-There is no users
+  There are <%= @user.last.id %> users
+  <h1>Users cont: <%= @user.last.id %> users </h1>
 <% end %>
