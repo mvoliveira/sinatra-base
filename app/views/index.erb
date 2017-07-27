@@ -1,23 +1,18 @@
-"Hello World"
-
-
 <form action="/save_new_user" method="post" name="user">
-  Nome do usuário
-  <br>
+  Insert here the user first name
   <input type="text" name="name" value=""></input>
-  <button type="submit" name="button" value="Enviar">enviarrrrr</button>
+  <button type="submit" name="button" value="Enviar">Cadastrar</button>
 </form>
 
-<% @user.each do |user| %>
-<li><%= user.id %> <%= user.name %></li>
-<% end %>
-
-
+<ul>
+  <b>Users list:</b>
+    <% @user.each do |user| %>
+      <li><%= user.id %> <%= user.name %></li>
+    <% end %>
+</ul>
 
 <% if @user.last.id == 1 %>
   There is only one user
-  <h1>Users cont: <%= @user.last.id %> user</h1>
 <% else %>
   There are <%= @user.last.id %> users
-  <h1>Users cont: <%= @user.last.id %> users </h1>
 <% end %>
